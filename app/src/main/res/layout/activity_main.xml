@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:app="http://schemas.android.com/apk/res-auto"
-  xmlns:tools="http://schemas.android.com/tools"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent"
-  android:orientation="vertical"
-  tools:context="com.sun.test.testviewtouch.MainActivity">
-
-  <com.sun.test.testviewtouch.MViewGroup
-    android:id="@+id/main_group"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:visibility="gone">
+    android:orientation="vertical"
+    tools:context="com.sun.test.testviewtouch.MainActivity">
 
-    <com.sun.test.testviewtouch.MView
-      android:layout_width="200dp"
-      android:layout_height="200dp"
-      android:background="#0f0"/>
+    <com.sun.test.testviewtouch.MViewGroup
+        android:id="@+id/main_group"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-  </com.sun.test.testviewtouch.MViewGroup>
+        <com.sun.test.testviewtouch.MView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="#0f0"/>
 
-  <com.sun.test.testviewtouch.MTextView
-    android:id="@+id/main_mtv"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_centerInParent="true"
-    android:background="#3300ff00"
-    android:textSize="25sp"/>
+    </com.sun.test.testviewtouch.MViewGroup>
+
+    <com.sun.test.testviewtouch.MTextView
+        android:id="@+id/main_mtv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="#3300ff00"
+        android:textSize="25sp"
+        android:visibility="gone"/>
 
 </RelativeLayout>

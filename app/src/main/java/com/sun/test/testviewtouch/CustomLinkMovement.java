@@ -6,22 +6,10 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.widget.TextView;
 
-/**
- * Description:
- * Created by Sun Yaozong on 2018/3/2.
- * Job NO.:600168
- * Phone:15001288397
- * Email:sunyaozong@syswin.com
- * Person in charge:丁朋伟
- *
- * @author Sun Yaozong 600168 15001288397
- */
-
 public class CustomLinkMovement extends LinkMovementMethod {
 
-    private final String TAG = "Span";
-
     private static CustomLinkMovement sInstance;
+    private final String TAG = "Span";
 
     public static CustomLinkMovement getInstance() {
         if (sInstance == null) {

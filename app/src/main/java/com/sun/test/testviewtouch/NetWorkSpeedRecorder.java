@@ -13,17 +13,6 @@ import java.util.Arrays;
 import java.util.Timer;
 import java.util.TimerTask;
 
-/**
- * Description:
- * Created by Sun Yaozong on 2018/1/29.
- * Job NO.:600168
- * Phone:15001288397
- * Email:sunyaozong@syswin.com
- * Person in charge:丁朋伟
- *
- * @author Sun Yaozong 600168 15001288397
- */
-
 public class NetWorkSpeedRecorder {
 
     private static final String TAG = "NetWorkUtil";
@@ -32,15 +21,6 @@ public class NetWorkSpeedRecorder {
     static boolean currentApp;
     static long lastTime;
     static long[] lastBytes;
-
-    public static void start(Context context, boolean currentApp) {
-        NetWorkSpeedRecorder.context = context;
-        NetWorkSpeedRecorder.currentApp = currentApp;
-        lastBytes = getCurrentBytes(context);
-        lastTime = System.currentTimeMillis();
-        new Timer().schedule(task, 0, 1000);
-    }
-
     static TimerTask task = new TimerTask() {
         @Override
         public void run() {
@@ -60,6 +40,14 @@ public class NetWorkSpeedRecorder {
             }
         }
     };
+
+    public static void start(Context context, boolean currentApp) {
+        NetWorkSpeedRecorder.context = context;
+        NetWorkSpeedRecorder.currentApp = currentApp;
+        lastBytes = getCurrentBytes(context);
+        lastTime = System.currentTimeMillis();
+        new Timer().schedule(task, 0, 1000);
+    }
 
     static String getInfo(String state, long rx, long tx) {
         return String.format("网络类型:%s\n"

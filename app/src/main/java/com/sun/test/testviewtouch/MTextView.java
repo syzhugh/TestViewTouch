@@ -6,20 +6,9 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
 
-/**
- * Description:
- * Created by Sun Yaozong on 2018/3/1.
- * Job NO.:600168
- * Phone:15001288397
- * Email:sunyaozong@syswin.com
- * Person in charge:丁朋伟
- *
- * @author Sun Yaozong 600168 15001288397
- */
-
 public class MTextView extends android.support.v7.widget.AppCompatTextView {
 
-    private final String TAG = "Span";
+    private final String TAG = "Test";
 
     public MTextView(Context context) {
         this(context, null);

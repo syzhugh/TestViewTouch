@@ -7,17 +7,6 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
-/**
- * Description:
- * Created by Sun Yaozong on 2018/1/27.
- * Job NO.:600168
- * Phone:15001288397
- * Email:sunyaozong@syswin.com
- * Person in charge:丁朋伟
- *
- * @author Sun Yaozong 600168 15001288397
- */
-
 public class MView extends View {
 
     private final String TAG = "Test";
@@ -33,7 +22,14 @@ public class MView extends View {
 
     public MView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-//        setClickable(true);
+        setClickable(true);
+//        setOnTouchListener(new OnTouchListener() {
+//            @Override
+//            public boolean onTouch(View v, MotionEvent event) {
+//                Log.i(TAG, "------MView------onTouch");
+//                return true;
+//            }
+//        });
     }
 
     @Override
@@ -46,13 +42,20 @@ public class MView extends View {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        Log.i(TAG, "------MView------onTouchEvent");
+        Log.i(TAG, "------MView------onTouchEvent" + MotionEvent
+                .actionToString(event.getAction()));
         boolean touchEvent = super.onTouchEvent(event);
-//        switch (event.getAction()) {
+        switch (event.getAction()) {
 //            case MotionEvent.ACTION_MOVE:
 //                touchEvent = false;
 //                break;
-//        }
+//            case MotionEvent.ACTION_DOWN:
+//                touchEvent = true;
+//                break;
+            case MotionEvent.ACTION_CANCEL:
+                Log.i(TAG, "//////////////////////cancel////////////////////////");
+                break;
+        }
         Log.i(TAG, "------MView------onTouchEvent---return:" + touchEvent);
         return touchEvent;
     }

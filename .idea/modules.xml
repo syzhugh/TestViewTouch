@@ -3,7 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/TestViewTouch.iml" filepath="$PROJECT_DIR$/TestViewTouch.iml" />
+      <module fileurl="file://D:\ASWorkSpace\TestViewTouch\.idea\modules\TestViewTouch.iml" filepath="D:\ASWorkSpace\TestViewTouch\.idea\modules\TestViewTouch.iml" />
+      <module fileurl="file://D:\ASWorkSpace\TestViewTouch\.idea\modules\a1\a1.iml" filepath="D:\ASWorkSpace\TestViewTouch\.idea\modules\a1\a1.iml" />
+      <module fileurl="file://D:\ASWorkSpace\TestViewTouch\.idea\modules\a2\a2.iml" filepath="D:\ASWorkSpace\TestViewTouch\.idea\modules\a2\a2.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://D:\ASWorkSpace\TestViewTouch\.idea\modules\app\pck\lib_a2.aar\app.iml" filepath="D:\ASWorkSpace\TestViewTouch\.idea\modules\app\pck\lib_a2.aar\app.iml" />
     </modules>
   </component>
 </project>
